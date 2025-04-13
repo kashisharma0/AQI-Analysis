@@ -16,8 +16,8 @@ df.info()
 
 
 # Data Cleaning
-print(df.info())
-print(df.isnull().sum())
+print(df.info()) # Check the data types and non-null count for each column
+print(df.isnull().sum()) # Check for missing values in the dataset; 300+ nulls
 
 for col in ['pollutant_min', 'pollutant_max', 'pollutant_avg']:
     df[col] = df[col].fillna(df[col].median())
